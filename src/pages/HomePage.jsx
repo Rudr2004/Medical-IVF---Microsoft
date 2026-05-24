@@ -1,12 +1,12 @@
 import AnimatedCounter from '../components/AnimatedCounter';
 import LocationsMapPreview from '../components/LocationsMapPreview';
 import IvfSorterAnimation from '../components/IvfSorterAnimation';
-import heroImg from '../assets/hero_family_planning.png';
-import familyBalancingImg from '../assets/family_balancing.png';
-import geneticPreventionImg from '../assets/genetic_prevention.png';
-import avatarFamily1 from '../assets/avatar_family1.png';
-import avatarFather1 from '../assets/avatar_father1.png';
-import avatarMother1 from '../assets/avatar_mother1.png';
+import heroImg from '../assets/hero_family_planning.jpg';
+import familyBalancingImg from '../assets/family_balancing.jpg';
+import geneticPreventionImg from '../assets/genetic_prevention.jpg';
+import avatarFamily1 from '../assets/avatar_family1.jpg';
+import avatarFather1 from '../assets/avatar_father1.jpg';
+import avatarMother1 from '../assets/avatar_mother1.jpg';
 
 export default function HomePage({ navigateTo }) {
   return (
