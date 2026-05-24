@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import familyBalancingImg from '../assets/family_balancing.png';
+import familyBalancingImg from '../assets/family_balancing.jpg';
 
 export default function FamilyBalancingPage({ navigateTo }) {
   const [openFaq, setOpenFaq] = useState(null);

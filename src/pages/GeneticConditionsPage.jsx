@@ -1,4 +1,4 @@
-import geneticPreventionImg from '../assets/genetic_prevention.png';
+import geneticPreventionImg from '../assets/genetic_prevention.jpg';
 
 export default function GeneticConditionsPage({ navigateTo }) {
   return (

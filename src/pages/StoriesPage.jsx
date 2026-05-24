@@ -1,9 +1,9 @@
-import avatarFamily1 from '../assets/avatar_family1.png';
-import avatarFather1 from '../assets/avatar_father1.png';
-import avatarMother1 from '../assets/avatar_mother1.png';
-import avatarFamily2 from '../assets/avatar_family2.png';
-import avatarCoupleUae from '../assets/avatar_couple_uae.png';
-import avatarFamilyAsian from '../assets/avatar_family_asian.png';
+import avatarFamily1 from '../assets/avatar_family1.jpg';
+import avatarFather1 from '../assets/avatar_father1.jpg';
+import avatarMother1 from '../assets/avatar_mother1.jpg';
+import avatarFamily2 from '../assets/avatar_family2.jpg';
+import avatarCoupleUae from '../assets/avatar_couple_uae.jpg';
+import avatarFamilyAsian from '../assets/avatar_family_asian.jpg';
 
 export default function StoriesPage({ navigateTo }) {
   const testimonials = [
