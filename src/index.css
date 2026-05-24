@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Syne+Mono&display=swap');
+@import './App.css';
+
+:root {
+  /* Theme colors - Light-themed cyan/teal medical aesthetic */
+  --bg-primary: #f2f8fa;
+  --bg-secondary: #e6eff2;
+  --bg-card: rgba(255, 255, 255, 0.8);
+  --bg-card-hover: rgba(255, 255, 255, 0.95);
+  --white: #0a1f2d;
+  --white-70: rgba(10, 31, 45, 0.72);
+  --white-40: rgba(10, 31, 45, 0.42);
+  --white-10: rgba(10, 31, 45, 0.08);
+  
+  --teal: #2fb0ab;
+  --teal-light: #3bc7c2;
+  --teal-dim: rgba(47, 176, 171, 0.08);
+  --teal-glow: rgba(47, 176, 171, 0.16);
+  
+  --border: rgba(10, 31, 45, 0.1);
+  --border-teal: rgba(47, 176, 171, 0.35);
+  
+  /* Additional color variables used in JSX pages */
+  --color-offwhite: #f5fafc;
+  --color-white: #ffffff;
+  --color-border: rgba(10, 31, 45, 0.08);
+  --color-accent: #2fb0ab;
+  --color-secondary: rgba(10, 31, 45, 0.65);
+  --color-ink: #0a1f2d;
+  
+  /* Typography */
+  --font-display: 'Sora', sans-serif;
+  --font-accent: 'Space Grotesk', sans-serif;
+  --font-body: 'Manrope', sans-serif;
+  --font-mono: 'Syne Mono', monospace;
+  
+  /* Shadows & Transitions */
+  --shadow-sm: 0 2px 8px rgba(10, 31, 45, 0.04);
+  --shadow-md: 0 8px 24px rgba(10, 31, 45, 0.06);
+  --shadow-lg: 0 16px 40px rgba(10, 31, 45, 0.08);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Global Resets */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: -0.005em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  color: inherit;
+}
+
+/* Floating Background Blobs */
+.organic-blobs-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0.85;
+}
+
+.organic-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  mix-blend-mode: multiply;
+}
+
+.blob-1 {
+  width: 600px;
+  height: 600px;
+  background: rgba(59, 199, 194, 0.12);
+  top: -100px;
+  right: -100px;
+  animation: floatBlob1 25s infinite ease-in-out alternate;
+}
+
+.blob-2 {
+  width: 500px;
+  height: 500px;
+  background: rgba(135, 206, 235, 0.15);
+  bottom: -150px;
+  left: -100px;
+  animation: floatBlob2 20s infinite ease-in-out alternate;
+}
+
+.blob-3 {
+  width: 400px;
+  height: 400px;
+  background: rgba(47, 176, 171, 0.08);
+  top: 40%;
+  left: 30%;
+  animation: floatBlob3 30s infinite ease-in-out alternate;
+}
+
+/* Animations for Blobs */
+@keyframes floatBlob1 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-100px, 80px) scale(1.15); }
+}
+
+@keyframes floatBlob2 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(120px, -60px) scale(0.9); }
+}
+
+@keyframes floatBlob3 {
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  100% { transform: translate(80px, 80px) scale(1.1) rotate(180deg); }
+}
+
+/* Scroll Reveal States */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation Delays */
+.delay-100 { transition-delay: 0.1s; }
+.delay-150 { transition-delay: 0.15s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+
+/* Page fade-in route change */
+.page-fade-in {
+  animation: pageFadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom Accessibility Outline */
+*:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
