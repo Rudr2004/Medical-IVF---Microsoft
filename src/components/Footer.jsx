@@ -67,8 +67,8 @@ export default function Footer({ setPage }) {
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '1rem' }}>
             <span>© 2025 MicroSort. All rights reserved.</span>
-            <a href="#" className="footer__link" onClick={handleClinicPartnership} style={{ margin: 0, fontWeight: 'bold' }}>
-              Are you a fertility clinic? Learn about partnership →
+            <a href="https://partner.microsort.com" target="_blank" rel="noopener noreferrer" className="footer__link" style={{ margin: 0, fontWeight: 'bold' }}>
+              For clinics →
             </a>
           </div>
         </div>

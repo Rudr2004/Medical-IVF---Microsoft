@@ -220,8 +220,8 @@ export default function App() {
               © {new Date().getFullYear()} MicroSort. All rights reserved.
             </div>
             <div>
-              <a href="#" onClick={(e) => { e.preventDefault(); navigateTo('/contact'); }} className="footer-partnership-link">
-                Are you a fertility clinic? Learn about partnership <span className="btn-arrow">→</span>
+              <a href="https://partner.microsort.com" target="_blank" rel="noopener noreferrer" className="footer-partnership-link">
+                For clinics <span className="btn-arrow">→</span>
               </a>
             </div>
           </div>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Syne+Mono&display=swap');
 
 :root {
   --bg-primary: #eef7fb;
@@ -14,9 +14,9 @@
   --teal-glow: rgba(59, 199, 194, 0.22);
   --border: rgba(15, 42, 61, 0.14);
   --border-teal: rgba(20, 217, 210, 0.5);
-  --font-display: 'Sora', sans-serif;
+  --font-display: 'Inter', sans-serif;
   --font-accent: 'Space Grotesk', sans-serif;
-  --font-body: 'Manrope', sans-serif;
+  --font-body: 'Inter', sans-serif;
   --font-mono: 'Syne Mono', monospace;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
