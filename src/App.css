@@ -733,9 +733,9 @@
 /* 6. HOMEPAGE SPECIFIC STYLING */
 .hero-section {
   position: relative;
-  padding: 8rem 0 4rem;
+  padding: 5.5rem 0 2rem;
   overflow: hidden;
-  min-height: 75vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
 }
@@ -836,7 +836,7 @@
   background: var(--bg-secondary);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  padding: 4rem 0;
+  padding: 2.5rem 0;
   position: relative;
 }
 
